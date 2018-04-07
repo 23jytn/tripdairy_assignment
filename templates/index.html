@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Demo project">
+    <meta name="author" content="Jyotindra Tiwari">
+
+    <title>TRIPDAIRY - Task</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "railwayenq/css/style.css" %}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="http://www.tripdairy.com">TRIPDAIRY</a>
+        </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Page Content -->
+    <div class="container my-5">
+
+        <div class="row py-5 text-center">
+
+            <div class="input-group input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">Train Number</span>
+                </div>
+                <input id="trainInput" autocomplete="off" data-provide="typeahead" type="text" class="form-control typeahead" aria-label="Large"
+                    placeholder="Enter train number">
+
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="submitBtn">enquire</button>
+                </div>
+            </div>
+
+            <div class="w-100 p-3 text-center">
+                <i class="loader text-primary fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                <div id="result" class="card w-50" style="margin: 0 auto">
+                    <div class="card-header text-success">Result</div>
+                    <ul class="list-group list-group-flush text-left">
+                        <li class="list-group-item">Train Name:
+                            <span id="name-value" class="font-weight-bold"></span>
+                        </li>
+                        <li class="list-group-item">Train Number:
+                            <span id="number-value" class="font-weight-bold"></span>
+                        </li>
+                        <li class="list-group-item">Position:
+                            <span id="position-value" class="font-weight-bold"></span>
+                        </li>
+                        <li class="list-group-item">Start Date:
+                            <span id="start-date-value" class="position-value font-weight-bold"></span>
+                        </li>
+                        <li class="list-group-item">Current Station:
+                            <span id="station-value" class="font-weight-bold"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="result-error" class="w-50" style="margin: 0 auto">
+                    <div class="alert alert-danger" role="alert">
+                        <h4 class="alert-heading">Error</h4>
+                        <p>Error occurred while calling Railway api</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
+    {% load static %}
+    <script src="{% static "railwayenq/js/script.js" %}"></script>
+</body>
+
+</html>
