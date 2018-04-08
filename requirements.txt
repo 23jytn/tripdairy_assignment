@@ -1,3 +1,12 @@
-Django == 2.0.4
-django-bootstrap3 == 9.1.0
-requests == 2.18.4
+certifi==2018.1.18
+chardet==3.0.4
+colorama==0.3.9
+Django==2.0.4
+django-bootstrap3==9.1.0
+gevent==1.2.2
+greenlet==0.4.13
+idna==2.6
+pigar==0.7.1
+pytz==2018.3
+requests==2.18.4
+urllib3==1.22
